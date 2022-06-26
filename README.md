@@ -1,2 +1,8 @@
 # orbital-mechanics-code
 Assignment from phys580 - Advanced Computational Physics, fall 2021
+
+Authors: David Wilkins, Dr. Rodrigo Navarro-Perez
+
+Purpose: This program solves a system of eight differential equations using the fourth order Runge-Kutta method in order to compute the orbits of planets around a primary mass and the energy of the system as a function of time. The initial positions and velocities of two planets are read into the program from namelist files in order to split the calculations into two cases: one in which two distant planets have circular orbits around the primary mass, and one in which the smaller planet orbits the larger planet, which orbits the primary mass. The solutions to the differential equations and the energies of the systems are written to output files as a function of time in order to be plotted and analyzed.
+
+How to use: In a Linux terminal, use command "make" within the src directory to compile. Then use "./planetary [namelist file]" to run the program, where [namelist file] is the name of a namelist file containing the parameters to be read into the program. The namelist file should contain the initial positions and velocities of the planets, as well as the final time, the number of steps for the calculations, and the name of the output file to be written to. Once the program is run with a valid namelist file as an argument, the program will calculate the results and write them to the output file corresponding to the namelist used. Run the program again using as many namelists as desired. Once all cases have been run, the output files containing the results for each case can be plotted and analyzed in Jupyter Notebook.
